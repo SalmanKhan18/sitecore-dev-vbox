@@ -36,9 +36,9 @@ More about Vagrant [here](https://www.vagrantup.com/intro/index.html)
 
 # Setup
 
-_IMPORTANT!_:
-Download the Important.7z file from [here](https://drive.google.com/file/d/182VECezWAe8aAqMIyMDHlDV-Z4O4MqLh/view?usp=drivesdk).
-Sitecore License (license.xml) not added.
+_IMPORTANT!_
+* Download the Important.7z file from [here](https://drive.google.com/file/d/182VECezWAe8aAqMIyMDHlDV-Z4O4MqLh/view?usp=drivesdk).
+* Sitecore License (license.xml) not added.
 
 ```
 git clone https://github.com/SalmanKhan18/sitecore-dev-vbox.git
