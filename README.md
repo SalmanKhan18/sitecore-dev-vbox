@@ -37,11 +37,12 @@ More about Vagrant [here](https://www.vagrantup.com/intro/index.html)
 # Setup
 
 _IMPORTANT!_:
-Put your Sitecore License (license.xml) file into  /sitecore-dev-vbox/Important/
+Download the Important.7z file from [here](https://drive.google.com/file/d/182VECezWAe8aAqMIyMDHlDV-Z4O4MqLh/view?usp=drivesdk).
+Sitecore License (license.xml) not added.
 
 ```
 git clone https://github.com/SalmanKhan18/sitecore-dev-vbox.git
-Download the Important.7z file from [here](https://drive.google.com/file/d/182VECezWAe8aAqMIyMDHlDV-Z4O4MqLh/view?usp=drivesdk), unzip it and move it into /sitecore-dev-vbox.
+Unzip the Important.7z file and move the Important folder into /sitecore-dev-vbox.
 Copy & Paste your Sitecore License (license.xml) file into the Important folder.
 cd sitecore-dev-vbox
 vagrant up
