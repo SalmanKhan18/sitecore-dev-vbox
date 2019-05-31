@@ -70,6 +70,25 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   
-  #  Run Deployment
-  config.vm.provision :shell, path: "Run.ps1"
+  #  Get Basic Information
+  config.vm.provision :shell, path: "scripts/Get-Basic-Information.ps1"
+
+  #  Enable Services
+  config.vm.provision :shell, path: "scripts/Enable-Services.ps1"
+
+  #  Install Pre-Requiste
+  config.vm.provision :shell, path: "scripts/Install-Pre-Requiste.ps1"
+
+  #  Copy Directory
+  config.vm.provision :shell, path: "scripts/Copy-Directory.ps1"
+
+  #  Register Solr
+  config.vm.provision :shell, path: "scripts/Register-Solr.ps1"
+
+  #  Configure SQL
+  config.vm.provision :shell, path: "scripts/Configure-SQL.ps1"
+
+  #  Install Sitecore Final Script
+  config.vm.provision :shell, path: "scripts/Install-Sitecore.ps1"
+
 end

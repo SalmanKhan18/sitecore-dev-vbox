@@ -2,12 +2,10 @@
 
 _Lets you set up the Virtual Box with Sitecore Version 9.0.2 CMS_
 
-# Pre Requisite To Install Sitecore
+# Pre Requisite To Setup Sitecore VBox
 
 1. Virtual Box <br>
 	You can download the latest Virtual Box from [here](https://www.virtualbox.org/wiki/Downloads).
-
-  
 
 2. Vagrant <br>
 	You can download the latest Vagrant from [here](https://www.vagrantup.com/downloads.html).
@@ -47,6 +45,10 @@ Copy & Paste your Sitecore License (license.xml) file into the Important folder.
 cd sitecore-dev-vbox
 vagrant up
 ```
+
+_NOTE_<br>
+The SQL Server password for *sa* login will be Qwerty@12345. 
+Please change it as per the needs. 
 
 # License
 
