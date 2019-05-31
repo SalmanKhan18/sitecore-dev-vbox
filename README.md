@@ -41,6 +41,7 @@ Put your Sitecore License (license.xml) file into  /sitecore-dev-vbox/Important/
 
 ```
 git clone https://github.com/SalmanKhan18/sitecore-dev-vbox.git
+Download the Important.7z file from [here](https://drive.google.com/file/d/182VECezWAe8aAqMIyMDHlDV-Z4O4MqLh/view?usp=drivesdk), unzip it and move it into /sitecore-dev-vbox.
 Copy & Paste your Sitecore License (license.xml) file into the Important folder.
 cd sitecore-dev-vbox
 vagrant up
