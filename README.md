@@ -47,7 +47,7 @@ vagrant up
 ```
 
 _NOTE_<br>
-The SQL Server password for *sa* login will be Qwerty@12345. 
+The SQL Server password for *sa* login will be Qwerty@12345. <br>
 Please change it as per the needs. 
 
 # License
