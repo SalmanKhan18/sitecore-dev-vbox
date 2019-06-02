@@ -1,6 +1,22 @@
-. .\Common-Functions.ps1
-
 Clear-Host
+
+# Move this the separate script & reference it here.
+# Start
+function ConsoleWrite {
+    Param ([string]$Value)
+    
+    Write-Output `n$Value
+}
+
+function Header {
+    Param ([string]$Value)
+
+    Write-Host "[---------------------------$Value---------------------------]" -ForegroundColor Green
+}
+
+# End
+
+$OSInfo = (Get-WmiObject win32_operatingsystem)
 
 Header -Value "Get Basic Information"
 
@@ -8,10 +24,10 @@ ConsoleWrite -Value "Powershell Version"
 (Get-Host).Version.Major
 
 ConsoleWrite -Value "Operating System"
-(Get-WmiObject win32_operatingsystem).name
+$OSInfo.name
 
 ConsoleWrite -Value "System Architecture"
-(Get-WmiObject win32_operatingsystem).osarchitecture
+$OSInfo.osarchitecture
 
 ConsoleWrite -Value "SQL Server Version"
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3

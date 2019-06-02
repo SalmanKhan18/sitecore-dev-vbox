@@ -1,4 +1,18 @@
-﻿. .\Common-Functions.ps1
+﻿# Move this the separate script & reference it here.
+# Start
+function ConsoleWrite {
+    Param ([string]$Value)
+    
+    Write-Output `n$Value
+}
+
+function Header {
+    Param ([string]$Value)
+
+    Write-Host "[---------------------------$Value---------------------------]" -ForegroundColor Green
+}
+
+# End
 
 Header -Value "Installing Pre-Requisites"
 
@@ -16,9 +30,10 @@ choco install urlrewrite  -y
 ConsoleWrite -Value "Url Rewrite Installed"
 
 ConsoleWrite -Value "Install Java Runtime Environment"
+$javaPath = "C:\Program Files\Java\jre1.8.0_211"
 choco install jre8 -PackageParameters "/exclude:32" -y
 ConsoleWrite -Value "Setting JAVA_HOME Path"
-& setx -m JAVA_HOME "C:\Program Files\Java\jre1.8.0_211"
+& setx -m JAVA_HOME $javaPath
 ConsoleWrite -Value "JAVA_HOME is set in the System Enviornment Variables.!"
 ConsoleWrite -Value "Java Runtime Environment Installed"
 
