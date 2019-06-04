@@ -50,7 +50,7 @@ _NOTE_<br>
 The SQL Server password for *sa* login will be Qwerty@12345. <br>
 Please change it as per the needs. 
 
-_Testing_<br>
+# Testing
 After the installation of Sitecore gets completed, goto _C:\Windows\System32\drivers\etc_ from your Host Machine and add _*192.168.33.10 sc902.local*_ at the end of the file.
 Browse http://sc902.local/sitecore and you should be able to see the website up and running! 
 
