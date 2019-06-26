@@ -45,7 +45,7 @@ More about Vagrant [here](https://www.vagrantup.com/intro/index.html)
 # Setup
 
 _IMPORTANT!_
-* Download the Important.7z file from [here](https://drive.google.com/file/d/1WA4CkkMT7pFH4PwZH6U66OQTJMgsgIdO/view?usp=sharing).
+* Download the SitecoreInstallationFiles.7z file from [here](https://drive.google.com/file/d/1WA4CkkMT7pFH4PwZH6U66OQTJMgsgIdO/view?usp=sharing).
 * You should be having Sitecore License (license.xml).
 
 ```
@@ -57,7 +57,11 @@ vagrant up
 ```
 
 _NOTE_<br>
-The SQL Server password for *sa* login will be Qwerty@12345. <br>
+The SQL Server password for SqlServerAuthentication 
+```
+Username: sa 
+Password: Qwerty@12345
+```
 Please change it as per the needs.
 
 # Testing
