@@ -58,7 +58,6 @@ packer build .\Windows-2019-Packer.json
 vagrant up
 ```
 
-<br>
 Sql Server Authentication  
 ```
 Username: sa 
