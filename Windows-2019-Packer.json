@@ -1,0 +1,68 @@
+{
+  "variables": {
+    "iso_url": "https://software-download.microsoft.com/download/sg/17763.379.190312-0539.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso",
+    "iso_checksum_type": "SHA256",
+    "iso_checksum": "221F9ACBC727297A56674A0F1722B8AC7B6E840B4E1FFBDD538A9ED0DA823562",
+    "autounattend": "./scripts/autounattend.xml"
+  },
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "iso_url": "{{user `iso_url`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "headless": true,
+      "boot_wait": "2m",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_wait_timeout": "6h",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "guest_os_type": "Windows2016_64",
+      "disk_size": 150000,
+      "floppy_files": [
+        "{{user `autounattend`}}",
+        "./scripts/openssh.ps1"
+      ],
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "8192"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "remote_path": "/tmp/script.bat",
+      "execute_command": "{{.Vars}} cmd /c C:/Windows/Temp/script.bat",
+      "scripts": [
+        "./scripts/Autounattended/vm-guest-tools.bat",
+        "./scripts/Autounattended/vagrant-ssh.bat",
+        "./scripts/Autounattended/enable-rdp.bat",
+        "./scripts/Autounattended/disable-auto-logon.bat"
+      ]
+    },
+    {
+      "type": "powershell",
+      "scripts": [
+        "./scripts/Sitecore-CMS/Enable-Services.ps1",
+        "./scripts/Sitecore-CMS/Install-Pre-Requiste.ps1"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "windows_2019_{{.Provider}}.box"
+    }
+  ]
+}
