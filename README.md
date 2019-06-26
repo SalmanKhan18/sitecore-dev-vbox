@@ -50,15 +50,15 @@ _IMPORTANT!_
 
 ```
 git clone https://github.com/SalmanKhan18/sitecore-dev-vbox.git
-Unzip the SitecoreInstallationFiles.7z file and move the SitecoreInstallationFiles folder into /sitecore-dev-vbox.
-Copy & Paste your Sitecore License (license.xml) file into the SitecoreInstallationFiles/sc9_install folder.
+// Unzip the SitecoreInstallationFiles.7z file and move the SitecoreInstallationFiles folder into /sitecore-dev-vbox.
+// Copy & Paste your Sitecore License (license.xml) file into the SitecoreInstallationFiles/sc9_install folder.
 cd sitecore-dev-vbox
 packer build .\Windows-2019-Packer.json
 // Wait till the process gets completed - Will take an hour approximately
 vagrant up
 ```
 
-_NOTE_<br>
+<br>
 Sql Server Authentication  
 ```
 Username: sa 
