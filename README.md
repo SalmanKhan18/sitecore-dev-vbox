@@ -57,7 +57,7 @@ vagrant up
 ```
 
 _NOTE_<br>
-The SQL Server password for SqlServerAuthentication 
+The SQL Server password for Sql Server Authentication 
 ```
 Username: sa 
 Password: Qwerty@12345
