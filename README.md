@@ -7,7 +7,7 @@ _Lets you set up the Virtual Box with Sitecore Version 9.0.2 CMS_
 1. Virtual Box <br>
 	You can download the Virtual Box from [here](https://www.virtualbox.org/wiki/Downloads).
 
-2. Packer
+2. Packer <br>
 	You can download Packer from [here](https://www.packer.io/downloads.html). 
 
 3. Vagrant <br>
