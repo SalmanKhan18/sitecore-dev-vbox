@@ -1,6 +1,6 @@
 ﻿Write-Host "Copying Directory" -ForegroundColor Green
 $path = "C:\\sc903_com_install"
-$remotePath = "C:\vagrant\Important\sc903_com_install\"
+$remotePath = "C:\vagrant\SitecoreInstallationFiles\sc903_com_install\"
 Write-Host "Create Directory"
 New-Item -Path $path -ItemType Directory
 

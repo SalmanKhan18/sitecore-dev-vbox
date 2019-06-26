@@ -1,5 +1,5 @@
 ﻿$path = "C:\\sc9_install"
-$remotePath = "C:\vagrant\Important\sc9_install\"
+$remotePath = "C:\vagrant\SitecoreInstallationFiles\sc9_install\"
 
 Write-Host "Copying Directory" -ForegroundColor Green
 
