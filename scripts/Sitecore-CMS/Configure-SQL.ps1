@@ -1,6 +1,6 @@
 ﻿Write-Host "Configuring SQL" -ForegroundColor Green
 
-$serverInstance = $env:COMPUTERNAME + '\SQLEXPRESS'
+$serverInstance = 'SITECORE-DEV-BO'
 
 Write-Host "Enabling Conatined Database Authentication"
 Invoke-Sqlcmd -ServerInstance $serverInstance -Query "sp_configure 'contained database authentication', 1;
@@ -28,5 +28,5 @@ GO"
 Write-Host "Changing to Mixed Mode Complete"
 
 Write-Host "Restarting SQL Server"
-Restart-Service -Name 'MSSQL$SQLEXPRESS' -Force
+Restart-Service -Name 'MSSQLSERVER' -Force
 Write-Host "Restarting SQL Server Complete"

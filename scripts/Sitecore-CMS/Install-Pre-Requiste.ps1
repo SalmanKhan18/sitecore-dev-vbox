@@ -5,21 +5,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;
 Invoke-Expression((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 Write-Host "Chocolatey Installed"
 
-Write-Host "Installing 7zip"
-choco install sql-server-management-studio -y --execution-timeout=0
-Write-Host "7zip Installed"
+Write-Host "Installing SQL Server 2017"
+choco install sql-server-2017 -y
+Write-Host "SQL Server 2017 Installed"
 
-Write-Host "Installing SQL Server Management Studio"
-choco install sql-server-management-studio -y --execution-timeout=0
+Write-Host "Insatlling SQL Server Management Studio"
+choco install sql-server-management-studio --version 14.0.17289.1 -y
 Write-Host "SQL Server Management Studio Installed"
-
-Write-Host "Insatlling SQL Server Express"
-choco install sql-server-express -y --execution-timeout=0
-Write-Host "SQL Server Express Installed"
-
-Write-Host "Insatlling SQL Server Data-Tier Application Framework (DacFx)"
-choco install sql2017-dacframework -y
-Write-Host "SQL Server Data-Tier Application Framework (DacFx) Installed"
 
 Write-host "Installing web deploy"
 choco install webdeploy -y

@@ -58,12 +58,12 @@ packer build .\Windows-2019-Packer.json
 vagrant up
 ```
 
-Sql Server Authentication  
+_Sql Server Authentication_ 
 ```
 Username: sa 
 Password: Qwerty@12345
 ```
-Please change it as per the needs.
+Please change it accordingly.
 
 # Testing
 After the installation of Sitecore gets completed, goto _C:\Windows\System32\drivers\etc_ from your Host Machine and add _*192.168.33.10 sc902.local*_ at the end of the file.
