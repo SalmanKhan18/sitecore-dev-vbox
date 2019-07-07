@@ -45,7 +45,7 @@ More about Vagrant [here](https://www.vagrantup.com/intro/index.html)
 # Setup
 
 _IMPORTANT!_
-* Download the SitecoreInstallationFiles.7z file from [here](https://drive.google.com/file/d/1WA4CkkMT7pFH4PwZH6U66OQTJMgsgIdO/view?usp=sharing).
+* Download the SitecoreInstallationFiles.7z file from [here](https://drive.google.com/file/d/1tFwbE70Qj4JF0ejE2lol5e6-aR7-aWc9/view?usp=sharing).
 * You should be having Sitecore License (license.xml).
 
 ```
